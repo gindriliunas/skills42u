@@ -673,7 +673,7 @@
     }
     @media (max-width: 600px) {
       .calc-inputs { grid-template-columns: 1fr; }
-      .calc-box { padding: 28px 20px; }
+      .calc-box { padding: 24px 16px; }
     }
 
     /* ─── FOOTER ─── */
@@ -685,21 +685,107 @@
     footer a:hover { color: var(--white); }
 
     /* ─── RESPONSIVE ─── */
+    @media (max-width: 900px) {
+      .pricing-grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
+      .why-grid { grid-template-columns: 1fr 1fr; }
+    }
+
     @media (max-width: 768px) {
+      /* Sections */
+      .section { padding: 52px 16px; }
+      .section-header { margin-bottom: 32px; }
+
+      /* Hero */
       .hero { grid-template-columns: 1fr; }
-      .hero-content { padding: 52px 24px 40px; }
-      .hero-image { min-height: 240px; }
+      .hero-content { padding: 44px 20px 36px; }
+      .hero-image { min-height: 220px; order: -1; }
       .hero-image::after {
-        background: linear-gradient(to bottom, transparent 60%, var(--navy) 100%);
+        background: linear-gradient(to bottom, transparent 50%, var(--navy) 100%);
       }
-      .split { grid-template-columns: 1fr; gap: 32px; }
-      .contact-grid { grid-template-columns: 1fr; }
+      .hero-stats { gap: 10px; }
+      .hero-stat-num { font-size: 1.1rem; min-width: 64px; }
+
+      /* Trust strip */
+      .trust-inner { gap: 10px 20px; }
+      .trust-item { font-size: .78rem; }
+
+      /* Founder quote */
+      .founder-quote-inner { flex-direction: column; gap: 16px; }
+
+      /* Pain grid */
+      .pain-grid { grid-template-columns: 1fr; gap: 14px; }
+
+      /* Avatar grid */
+      .avatar-grid { grid-template-columns: 1fr 1fr; }
+
+      /* Split layouts */
+      .split { grid-template-columns: 1fr; gap: 28px; }
+      .split-img { order: -1; }
+
+      /* Calculator */
+      .calc-inputs { grid-template-columns: 1fr; }
+      .calc-results-grid { grid-template-columns: 1fr 1fr !important; }
+
+      /* Steps */
       .steps { grid-template-columns: 1fr 1fr; }
       .step { border-right: none; border-bottom: 1px solid rgba(255,255,255,.1); }
+
+      /* Comparison table — keep scroll */
+      .compare-wrap { -webkit-overflow-scrolling: touch; }
+      .compare-table { min-width: 520px; }
+
+      /* Contact */
+      .contact-grid { grid-template-columns: 1fr; }
+      .contact-grid > div:first-child { position: static !important; }
+
+      /* CTA band */
+      .cta-band { padding: 48px 16px; }
+      .cta-btns { flex-direction: column; align-items: center; }
+      .btn-white, .btn-dark { width: 100%; max-width: 320px; text-align: center; }
+
+      /* Guarantee */
+      .guarantee-section { padding: 44px 16px; }
     }
+
     @media (max-width: 480px) {
+      /* Nav */
+      .nav { padding: 10px 16px; }
+      .nav-logo-text { font-size: .95rem; }
+      .btn-nav-call { font-size: .8rem; padding: 8px 14px; }
+
+      /* Hero */
+      .hero-ctas { flex-direction: column; }
+      .hero-ctas .btn-primary { width: 100%; text-align: center; }
+
+      /* Avatar grid */
+      .avatar-grid { grid-template-columns: 1fr; }
+
+      /* Steps */
       .steps { grid-template-columns: 1fr; }
-      .nav-logo-text { font-size: 1rem; }
+      .step { border-bottom: 1px solid rgba(255,255,255,.1); border-right: none; }
+
+      /* Calculator results */
+      .calc-results-grid { grid-template-columns: 1fr !important; }
+
+      /* Pricing */
+      .pricing-grid { max-width: 100%; }
+      .price-card { padding: 28px 20px; }
+
+      /* Risk level badge */
+      .calc-risk-level { flex-direction: column; gap: 8px; text-align: center; }
+
+      /* Testi grid */
+      .testi-grid { grid-template-columns: 1fr; }
+
+      /* Compare table font */
+      .compare-table tbody td,
+      .compare-table thead th { font-size: .78rem; padding: 10px 12px; }
+
+      /* Form */
+      .form-box { padding: 24px 16px; }
+
+      /* Footer */
+      footer { font-size: .75rem; line-height: 1.8; }
     }
   </style>
 </head>
@@ -760,7 +846,7 @@
 
 <!-- FOUNDER QUOTE -->
 <div style="background:var(--navy-mid);padding:32px 24px;border-top:1px solid rgba(255,255,255,.07);">
-  <div style="max-width:780px;margin:0 auto;display:flex;gap:24px;align-items:center;">
+  <div class="founder-quote-inner" style="max-width:780px;margin:0 auto;display:flex;gap:24px;align-items:center;">
     <img src="lenka.jpeg" alt="Lenka, Founder of Skills 42U"
       style="width:72px;height:72px;border-radius:50%;object-fit:cover;object-position:top;flex-shrink:0;border:3px solid var(--orange);" />
     <div>
@@ -1258,14 +1344,14 @@
 <!-- CONTACT -->
 <section class="section section-cream" id="contact">
   <div class="container">
-    <div class="section-header">
+    <div class="section-header" style="text-align:center;">
       <p class="section-eyebrow">Get in Touch</p>
       <h2 class="section-title">Ready to Protect Your Team?</h2>
-      <p class="section-sub">No obligation. No hard sell. Just a clear quote and a date that works for you — usually within 24 hours of enquiring.</p>
+      <p class="section-sub" style="margin:0 auto;">No obligation. No hard sell. Just a clear quote and a date that works for you — usually within 24 hours of enquiring.</p>
     </div>
     <div class="contact-grid">
 
-      <div>
+      <div style="position:sticky;top:90px;">
         <div class="contact-detail">
           <div class="contact-icon">&#128222;</div>
           <div>
@@ -1293,46 +1379,25 @@
         </div>
       </div>
 
-      <div class="form-box">
-        <h3>&#128221; Book a Course</h3>
-        <form action="mailto:info@skills42u.com" method="post" enctype="text/plain">
-          <div class="form-row">
-            <label>Your Name *</label>
-            <input type="text" name="name" placeholder="e.g. Sarah Johnson" required />
-          </div>
-          <div class="form-row">
-            <label>Company Name *</label>
-            <input type="text" name="company" placeholder="e.g. Acme Ltd" required />
-          </div>
-          <div class="form-row">
-            <label>Phone Number *</label>
-            <input type="tel" name="phone" placeholder="e.g. 01622 000000" required />
-          </div>
-          <div class="form-row">
-            <label>Email Address</label>
-            <input type="email" name="email" placeholder="e.g. sarah@acme.co.uk" />
-          </div>
-          <div class="form-row">
-            <label>Course Interested In</label>
-            <select name="course">
-              <option value="">-- Tell us which course interests you --</option>
-              <option>6-Hour Emergency First Aid at Work (£495)</option>
-              <option>2-Day Paediatric First Aid (£900)</option>
-              <option>3-Day First Aid at Work Full (£1,300)</option>
-              <option>Not sure — please advise</option>
-            </select>
-          </div>
-          <div class="form-row">
-            <label>Number of Delegates</label>
-            <input type="number" name="delegates" placeholder="e.g. 8" min="1" max="50" />
-          </div>
-          <div class="form-row">
-            <label>Preferred Dates / Notes</label>
-            <textarea name="message" placeholder="Any preferred dates, location details, or questions..."></textarea>
-          </div>
-          <button class="btn-submit" type="submit">Send Enquiry — We'll Call You Back</button>
-          <p class="form-note">&#128274; Your details are never shared with third parties.</p>
-        </form>
+      <div style="width:100%;min-height:749px;">
+        <iframe
+          src="https://api.leadconnectorhq.com/widget/form/sh5mkktRiDaTsFXBazQh"
+          style="width:100%;height:749px;border:none;border-radius:12px;"
+          id="inline-sh5mkktRiDaTsFXBazQh"
+          data-layout="{'id':'INLINE'}"
+          data-trigger-type="alwaysShow"
+          data-trigger-value=""
+          data-activation-type="alwaysActivated"
+          data-activation-value=""
+          data-deactivation-type="neverDeactivate"
+          data-deactivation-value=""
+          data-form-name="Skills42u Contact Form"
+          data-height="749"
+          data-layout-iframe-id="inline-sh5mkktRiDaTsFXBazQh"
+          data-form-id="sh5mkktRiDaTsFXBazQh"
+          title="Skills42u Contact Form">
+        </iframe>
+        <script src="https://link.msgsndr.com/js/form_embed.js"></script>
       </div>
 
     </div>
