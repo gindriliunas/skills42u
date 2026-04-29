@@ -131,7 +131,7 @@
 
     /* ─── TRUST STRIP ─── */
     .trust-strip {
-      background: var(--blue-light, #eef1f8);
+      background: #eef1f8;
       border-top: 3px solid var(--navy);
       border-bottom: 1px solid var(--gray-200);
       padding: 18px 24px;
@@ -151,8 +151,6 @@
       display: flex; align-items: center; justify-content: center;
       color: white; font-size: .72rem; font-weight: 700; flex-shrink: 0;
     }
-    .trust-item.urgent { color: var(--orange); }
-    .trust-item.urgent .trust-dot { background: var(--orange); }
 
     /* ─── SHARED SECTION ─── */
     .section { padding: 72px 24px; }
@@ -274,34 +272,6 @@
       content: '✓'; color: var(--green); font-weight: 800;
       font-size: .85rem; flex-shrink: 0; margin-top: 2px;
     }
-    .value-stack {
-      background: var(--gray-50); border: 1px solid var(--gray-200);
-      border-radius: 10px; padding: 14px 16px; margin-bottom: 20px; font-size: .8rem;
-    }
-    .value-stack-title {
-      font-size: .7rem; font-weight: 800; text-transform: uppercase; letter-spacing: .8px;
-      color: var(--gray-600); margin-bottom: 10px;
-    }
-    .vs-row {
-      display: flex; justify-content: space-between; align-items: center;
-      padding: 4px 0; border-bottom: 1px solid var(--gray-200);
-      color: var(--gray-700); font-size: .8rem;
-    }
-    .vs-row:last-of-type { border-bottom: none; }
-    .vs-row.total {
-      font-weight: 800; color: var(--gray-900);
-      border-top: 1.5px solid var(--gray-300); border-bottom: none;
-      padding-top: 8px; margin-top: 4px;
-    }
-    .vs-val { font-weight: 600; color: var(--gray-600); }
-    .vs-val.green { color: var(--green); font-weight: 700; }
-    .vs-your {
-      display: flex; justify-content: space-between; align-items: center;
-      background: var(--navy); color: var(--white);
-      border-radius: 7px; padding: 9px 13px;
-      font-weight: 800; font-size: .85rem; margin-top: 8px;
-    }
-    .vs-your span:last-child { font-size: 1rem; }
     .btn-card {
       display: block; width: 100%; text-align: center;
       background: var(--navy); color: var(--white);
@@ -520,30 +490,6 @@
     .contact-value { font-size: .97rem; font-weight: 700; color: var(--gray-900); }
     .contact-value a { color: var(--orange); text-decoration: none; }
     .contact-value a:hover { text-decoration: underline; }
-    .form-box {
-      background: var(--white); border: 2px solid var(--gray-200);
-      border-radius: 16px; padding: 36px 30px;
-    }
-    .form-box h3 { font-size: 1.15rem; font-weight: 800; margin-bottom: 22px; }
-    .form-row { margin-bottom: 14px; }
-    .form-row label { display: block; font-size: .8rem; font-weight: 700; color: var(--gray-700); margin-bottom: 5px; }
-    .form-row input, .form-row select, .form-row textarea {
-      width: 100%; border: 1.5px solid var(--gray-200);
-      border-radius: 8px; padding: 10px 13px;
-      font-size: .9rem; font-family: inherit; color: var(--gray-900);
-      outline: none; transition: border-color .2s; background: var(--white);
-    }
-    .form-row input:focus, .form-row select:focus, .form-row textarea:focus { border-color: var(--orange); }
-    .form-row textarea { resize: vertical; min-height: 80px; }
-    .btn-submit {
-      display: block; width: 100%;
-      background: var(--orange); color: var(--white);
-      font-weight: 800; font-size: 1rem; padding: 14px;
-      border-radius: 8px; border: none; cursor: pointer;
-      font-family: inherit; transition: background .2s;
-    }
-    .btn-submit:hover { background: var(--orange-dark); }
-    .form-note { font-size: .75rem; color: var(--gray-600); text-align: center; margin-top: 10px; }
 
     /* ─── MEET LENKA ─── */
     .lenka-quals { list-style: none; margin-top: 24px; }
@@ -562,15 +508,6 @@
       background: #eef1f8; border-left: 4px solid var(--navy);
       border-radius: 0 10px 10px 0;
       font-size: .93rem; font-style: italic; color: var(--gray-700); line-height: 1.6;
-    }
-
-    /* ─── SAVE CALLOUT ─── */
-    .save-callout {
-      display: inline-flex; align-items: center; gap: 6px;
-      background: #dcfce7; color: #15803d;
-      border-radius: 6px; padding: 5px 12px;
-      font-size: .78rem; font-weight: 800;
-      margin-bottom: 20px;
     }
 
     /* ─── RISK CALCULATOR ─── */
@@ -687,7 +624,6 @@
     /* ─── RESPONSIVE ─── */
     @media (max-width: 900px) {
       .pricing-grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
-      .why-grid { grid-template-columns: 1fr 1fr; }
     }
 
     @media (max-width: 768px) {
@@ -802,7 +738,7 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-content">
-    <div class="hero-badge">&#127959; Kent &amp; Medway's On-Site First Aid Specialists</div>
+    <div class="hero-badge">&#127959; Kent &amp; South East's On-Site First Aid Specialists</div>
     <h1>Your Team Will Know <span>Exactly What to Do</span> When It Matters Most</h1>
     <p class="hero-sub">HSE-compliant first aid training delivered at your Kent workplace — no travel, no venue costs, same-day certificates. Most businesses booked and trained within 7 days.</p>
     <div class="hero-ctas">
@@ -840,7 +776,6 @@
     <div class="trust-item"><span class="trust-dot">✓</span> 3-Year Certificate Validity</div>
     <div class="trust-item"><span class="trust-dot">✓</span> On-Site Delivery</div>
     <div class="trust-item"><span class="trust-dot">✓</span> We Reply Within 2 Hours</div>
-    <div class="trust-item urgent"><span class="trust-dot">!</span> Limited slots — we book out 2–3 weeks ahead</div>
   </div>
 </div>
 
@@ -861,7 +796,7 @@
 <section class="section section-navy">
   <div class="container">
     <div class="section-header" style="text-align:center;margin-bottom:0;">
-      <p class="section-eyebrow orange">The Risk of Doing Nothing</p>
+      <p class="section-eyebrow white">The Risk of Doing Nothing</p>
       <h2 class="section-title white">Every minute without a trained first aider<br />is a liability</h2>
     </div>
     <div class="pain-grid">
@@ -1003,7 +938,6 @@
           alt="CPR and emergency first aid training" />
         <p class="course-eyebrow">6-Hour Course</p>
         <h3 class="course-title">Emergency First Aid at Work</h3>
-        <div class="save-callout">&#127381; Save up to £100 vs other Kent providers</div>
         <div class="price-row">
           <span class="price-sym">£</span>
           <span class="price-amt">495</span>
@@ -1167,7 +1101,7 @@
       <div class="step">
         <div class="step-num">1</div>
         <h3>Takes 2 Minutes to Enquire</h3>
-        <p>Call or fill in the form. We guarantee a response within 2 hours during business hours.</p>
+        <p>Fill in the form below. We guarantee a response within 2 hours during business hours.</p>
       </div>
       <div class="step">
         <div class="step-num">2</div>
@@ -1343,14 +1277,12 @@
 <!-- CONTACT -->
 <section class="section section-cream" id="contact">
   <div class="container">
-    <div class="section-header" style="text-align:center;">
-      <p class="section-eyebrow">Get in Touch</p>
-      <h2 class="section-title">Ready to Protect Your Team?</h2>
-      <p class="section-sub" style="margin:0 auto;">No obligation. No hard sell. Just a clear quote and a date that works for you — usually within 24 hours of enquiring.</p>
-    </div>
     <div class="contact-grid">
 
       <div style="position:sticky;top:90px;">
+        <p class="section-eyebrow" style="margin-bottom:10px;">Get in Touch</p>
+        <h2 class="section-title" style="margin-bottom:12px;">Ready to Protect Your Team?</h2>
+        <p style="font-size:.97rem;color:var(--gray-600);line-height:1.65;margin-bottom:32px;">No obligation. No hard sell. Just a clear quote and a date that works for you.</p>
         <div class="contact-detail">
           <div class="contact-icon">&#128222;</div>
           <div>
@@ -1369,12 +1301,15 @@
           <div class="contact-icon">&#128205;</div>
           <div>
             <div class="contact-label">Coverage Area</div>
-            <div class="contact-value">Kent &amp; Medway — Maidstone, Sittingbourne, Ashford, Dartford, Tunbridge Wells &amp; surrounding areas</div>
+            <div class="contact-value">Kent &amp; the South East — Maidstone, Sittingbourne, Ashford, Dartford, Tunbridge Wells &amp; surrounding areas</div>
           </div>
         </div>
-        <div style="margin-top:24px;padding:20px 24px;background:var(--orange-light);border-radius:12px;">
-          <p style="font-size:.85rem;font-weight:800;text-transform:uppercase;letter-spacing:.6px;color:var(--orange);margin-bottom:8px;">&#9201; Response Guarantee</p>
-          <p style="font-size:.95rem;font-weight:600;color:var(--navy);">We reply to every enquiry within 2 hours during business hours — or we'll follow up first thing the next morning. No chasing, no waiting around.</p>
+        <div class="contact-detail">
+          <div class="contact-icon">&#9201;</div>
+          <div>
+            <div class="contact-label">Response Time</div>
+            <div class="contact-value">We reply within 2 hours during business hours</div>
+          </div>
         </div>
       </div>
 
@@ -1406,7 +1341,7 @@
 <!-- FOOTER -->
 <footer>
   <p>
-    &copy; 2025 Skills 42U &mdash;
+    &copy; 2026 Skills 42U &mdash;
     <a href="tel:07481344486">07481 344486</a> &mdash;
     <a href="mailto:info@skills42u.com">info@skills42u.com</a> &mdash;
     First Aid Training Kent
