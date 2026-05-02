@@ -50,6 +50,15 @@
       letter-spacing: -0.5px; text-decoration: none;
     }
     .nav-logo-text em { font-style: normal; color: var(--orange); }
+    .nav-links {
+      display: flex; align-items: center; gap: 4px; flex: 1; justify-content: center;
+    }
+    .nav-link {
+      color: rgba(255,255,255,.7); font-size: .85rem; font-weight: 600;
+      text-decoration: none; padding: 7px 12px; border-radius: 6px;
+      transition: color .15s, background .15s; white-space: nowrap;
+    }
+    .nav-link:hover { color: var(--white); background: rgba(255,255,255,.08); }
     .nav-right { display: flex; align-items: center; gap: 10px; }
     .btn-nav-call {
       background: var(--orange); color: var(--white);
@@ -683,6 +692,10 @@
       .guarantee-section { padding: 44px 16px; }
     }
 
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+    }
+
     @media (max-width: 480px) {
       /* Nav */
       .nav { padding: 10px 16px; }
@@ -730,6 +743,14 @@
 <!-- NAV -->
 <nav class="nav">
   <a class="nav-logo-text" href="#">Skills<em>42U</em></a>
+  <div class="nav-links">
+    <a class="nav-link" href="#pricing">Courses</a>
+    <a class="nav-link" href="#instructor">Instructor</a>
+    <a class="nav-link" href="#why-us">Why Us</a>
+    <a class="nav-link" href="#reviews">Reviews</a>
+    <a class="nav-link" href="#how-it-works">How It Works</a>
+    <a class="nav-link" href="#faq">FAQ</a>
+  </div>
   <div class="nav-right">
     <a class="btn-nav-call" href="#contact">Book Now</a>
   </div>
@@ -1005,7 +1026,7 @@
 </section>
 
 <!-- WHY US — photo split -->
-<section class="section section-cream">
+<section class="section section-cream" id="why-us">
   <div class="container">
     <div class="split">
       <div class="split-img">
@@ -1053,7 +1074,7 @@
 </section>
 
 <!-- MEET LENKA -->
-<section class="section">
+<section class="section" id="instructor">
   <div class="container">
     <div class="split">
       <div class="split-img" style="display:flex;align-items:flex-start;">
@@ -1091,7 +1112,7 @@
 </section>
 
 <!-- HOW IT WORKS -->
-<section class="section section-navy">
+<section class="section section-navy" id="how-it-works">
   <div class="container">
     <div class="section-header" style="text-align:center;">
       <p class="section-eyebrow white">How It Works</p>
@@ -1123,7 +1144,7 @@
 </section>
 
 <!-- TESTIMONIALS -->
-<section class="section section-gray">
+<section class="section section-gray" id="reviews">
   <div class="container">
     <div class="section-header">
       <p class="section-eyebrow">Client Reviews</p>
@@ -1214,7 +1235,7 @@
 </section>
 
 <!-- FAQ -->
-<section class="section">
+<section class="section" id="faq">
   <div class="container">
     <div class="section-header" style="text-align:center;">
       <p class="section-eyebrow">FAQs</p>
