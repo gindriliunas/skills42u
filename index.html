@@ -62,7 +62,7 @@
     }
 
     html { scroll-behavior: smooth; }
-    body { font-family: 'Inter', sans-serif; color: var(--gray-900); background: var(--white); line-height: 1.6; }
+    body { font-family: 'Inter', sans-serif; color: var(--gray-900); background: var(--white); line-height: 1.6; overflow-x: hidden; }
 
     /* ─── STICKY NAV ─── */
     .nav {
@@ -658,7 +658,7 @@
 
     /* ─── RESPONSIVE ─── */
     @media (max-width: 900px) {
-      .pricing-grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
+      .pricing-grid { grid-template-columns: 1fr; max-width: 520px; margin: 0 auto; }
     }
 
     @media (max-width: 768px) {
@@ -720,6 +720,9 @@
 
     @media (max-width: 768px) {
       .nav-links { display: none; }
+      .section-title { font-size: clamp(1.45rem, 5vw, 1.9rem); }
+      .faq-q { font-size: .88rem; padding: 16px 16px; }
+      .price-amt { font-size: 2.4rem; }
     }
 
     @media (max-width: 480px) {
@@ -729,8 +732,9 @@
       .btn-nav-call { font-size: .8rem; padding: 8px 14px; }
 
       /* Hero */
-      .hero-ctas { flex-direction: column; }
-      .hero-ctas .btn-primary { width: 100%; text-align: center; }
+      .hero-ctas { flex-direction: column; align-items: stretch; }
+      .hero-ctas .btn-primary,
+      .hero-ctas .btn-ghost { width: 100%; text-align: center; max-width: 100%; }
 
       /* Avatar grid */
       .avatar-grid { grid-template-columns: 1fr; }
