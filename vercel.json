@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/open-courses",
+      "destination": "/",
+      "permanent": true
+    }
+  ]
+}
