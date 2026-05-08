@@ -651,10 +651,25 @@
     /* ─── FOOTER ─── */
     footer {
       background: var(--navy); color: rgba(255,255,255,.5);
-      text-align: center; padding: 28px 24px; font-size: .8rem;
+      padding: 48px 24px 28px; font-size: .8rem;
     }
-    footer a { color: rgba(255,255,255,.5); text-decoration: none; }
-    footer a:hover { color: var(--white); }
+    .footer-inner { max-width: 1000px; margin: 0 auto; }
+    .footer-links {
+      display: flex; flex-wrap: wrap; gap: 8px 0;
+      justify-content: center; margin-bottom: 28px;
+      border-bottom: 1px solid rgba(255,255,255,.08); padding-bottom: 24px;
+    }
+    .footer-links a {
+      color: rgba(255,255,255,.55); text-decoration: none;
+      font-size: .82rem; font-weight: 600; padding: 4px 14px;
+      border-right: 1px solid rgba(255,255,255,.12);
+      transition: color .15s; white-space: nowrap;
+    }
+    .footer-links a:last-child { border-right: none; }
+    .footer-links a:hover { color: var(--white); }
+    .footer-copy { text-align: center; color: rgba(255,255,255,.35); font-size: .75rem; line-height: 1.8; }
+    .footer-copy a { color: rgba(255,255,255,.4); text-decoration: none; }
+    .footer-copy a:hover { color: var(--white); }
 
     /* ─── RESPONSIVE ─── */
     @media (max-width: 900px) {
@@ -764,7 +779,7 @@
       .form-box { padding: 24px 16px; }
 
       /* Footer */
-      footer { font-size: .75rem; line-height: 1.8; }
+      .footer-links a { font-size: .78rem; padding: 4px 10px; }
     }
   </style>
 
@@ -1573,12 +1588,19 @@
 
 <!-- FOOTER -->
 <footer>
-  <p>
-    &copy; 2026 Skills 42U &mdash;
-    <a href="tel:07481344486">07481 344486</a> &mdash;
-    <a href="mailto:info@skills42u.com">Email us</a> &mdash;
-    First Aid Training Kent
-  </p>
+  <div class="footer-inner">
+    <nav class="footer-links" aria-label="Footer navigation">
+      <a href="/">Home</a>
+      <a href="/first-aid-course-medway">First Aid Medway</a>
+      <a href="/first-aid-course-maidstone">First Aid Maidstone</a>
+      <a href="/first-aid-course-dartford">First Aid Dartford</a>
+      <a href="/first-aid-course-ashford">First Aid Ashford</a>
+      <a href="/first-aid-course-tunbridge-wells">First Aid Tunbridge Wells</a>
+      <a href="tel:07481344486">07481 344486</a>
+      <a href="mailto:info@skills42u.com">Email us</a>
+    </nav>
+    <p class="footer-copy">&copy; 2026 Skills 42U &mdash; Accredited First Aid Training across Kent &amp; the South East</p>
+  </div>
 </footer>
 
 <script>
