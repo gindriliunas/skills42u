@@ -181,8 +181,78 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.skills42u.com/blog/what-happens-on-a-paediatric-first-aid-course</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.skills42u.com/blog/first-aid-requirements-retail</loc>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.skills42u.com/first-aid-course-chatham</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.skills42u.com/paediatric-first-aid-maidstone</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.skills42u.com/first-aid-course-herne-bay</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.skills42u.com/blog/first-aid-requirements-manufacturing</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.skills42u.com/blog/first-aid-requirements-transport-logistics</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.skills42u.com/first-aid-course-deal</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.skills42u.com/first-aid-course-sheerness</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.skills42u.com/first-aid-training-manufacturing-kent</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.skills42u.com/blog/first-aid-requirements-events</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.skills42u.com/blog/what-happens-on-a-mental-health-first-aid-course</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.skills42u.com/paediatric-first-aid-canterbury</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.skills42u.com/first-aid-training-care-homes-kent</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.skills42u.com/first-aid-course-broadstairs</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>
