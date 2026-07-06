@@ -16,7 +16,7 @@ Website: https://www.skills42u.com
 All courses are delivered at the client's premises. Certificates issued same day, valid for 3 years.
 
 ## Areas Served
-Kent, Essex, London. Medway, Maidstone, Dartford, Ashford, Tunbridge Wells, Sittingbourne, Sevenoaks, Canterbury, Chelmsford, Basildon, Southend-on-Sea, Colchester, Harlow, Thurrock, Romford, Brentwood, Ilford, Barking, Dagenham, East London (Tower Hamlets, Newham, Hackney, Stratford, Canary Wharf, Waltham Forest, Redbridge, Havering), South London (Bromley, Croydon, Sutton, Merton, Wandsworth, Lambeth, Southwark, Lewisham, Greenwich, Bexley) and surrounding areas.
+Kent, Essex, London. Medway, Maidstone, Dartford, Ashford, Tunbridge Wells, Sittingbourne, Sevenoaks, Canterbury, Chelmsford, Basildon, Southend-on-Sea, Colchester, Harlow, Thurrock, Romford, Brentwood, Ilford, Barking, Dagenham, East London (Tower Hamlets, Newham, Hackney, Stratford, Canary Wharf, Waltham Forest, Redbridge, Havering), South London (Bromley, Croydon, Sutton, Merton, Wandsworth, Lambeth, Southwark, Lewisham, Greenwich, Bexley), North London (Enfield, Haringey, Barnet, Harrow), West London (Ealing, Hammersmith and Fulham, Hounslow, Brent, Hillingdon, Richmond upon Thames, Kingston upon Thames) and surrounding areas.
 
 ## Key Pages
 - https://www.skills42u.com/ — Homepage, course overview, pricing, FAQ, contact form
@@ -37,3 +37,5 @@ Kent, Essex, London. Medway, Maidstone, Dartford, Ashford, Tunbridge Wells, Sitt
 - https://www.skills42u.com/first-aid-training-london — First aid training across all London boroughs and the City of London: office, construction, logistics, retail, hospitality and childcare
 - https://www.skills42u.com/first-aid-training-east-london — First aid training across East London: Tower Hamlets, Newham, Hackney, Stratford, Canary Wharf and all East London postcodes
 - https://www.skills42u.com/first-aid-training-south-london — First aid training across South London: Bromley, Croydon, Sutton, Merton, Wandsworth, Lambeth, Southwark, Lewisham, Greenwich and Bexley
+- https://www.skills42u.com/first-aid-training-north-london — First aid training across North London: Enfield, Haringey, Barnet, Harrow and surrounding boroughs
+- https://www.skills42u.com/first-aid-training-west-london — First aid training across West London: Ealing, Hammersmith and Fulham, Hounslow, Brent, Hillingdon, Richmond upon Thames and Kingston upon Thames, including the Heathrow airport corridor
