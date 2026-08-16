@@ -3,6 +3,12 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "skills42u.com" }],
+      "destination": "https://www.skills42u.com/:path*",
+      "permanent": true
+    },
+    {
       "source": "/open-courses",
       "destination": "/",
       "permanent": true

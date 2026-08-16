@@ -277,6 +277,11 @@ After each daily run, append to this log (or a separate `seo-page-log.csv`):
 |------|------|------|---------------|------------|-------------|-------------------|--------|
 | 2026-05-09 | /blog/how-much-first-aid-training-costs | Blog | first aid training cost uk | 1,200 | Article, FAQ, Breadcrumb | 4 | Deployed |
 | 2026-05-09 | /first-aid-course-gravesend | Location | first aid course gravesend | 750 | LocalBusiness, FAQ, Breadcrumb, Service | 5 | Deployed |
+| 2026-07-28 | /blog/defibrillator-requirements-uk-workplace | Blog | AED defibrillator requirements UK workplace | 1,150 | Article, FAQ, Breadcrumb | 5 | Deployed |
+| 2026-07-28 | /blog/first-aid-kit-requirements-uk-workplace | Blog | first aid kit requirements UK workplace | 1,200 | Article, FAQ, Breadcrumb | 5 | Deployed |
+| 2026-07-28 | /mental-health-first-aid-essex | Location | mental health first aid essex | 850 | LocalBusiness, Service, FAQ, Breadcrumb | 6 | Deployed |
+| 2026-07-28 | /first-aid-training-rayleigh | Location | first aid course rayleigh | 900 | LocalBusiness, Service, FAQ, Breadcrumb | 6 | Deployed |
+| 2026-07-28 | /first-aid-training-hospitality-essex | Service | first aid training hospitality essex | 900 | LocalBusiness, Service, FAQ, Breadcrumb | 6 | Deployed |
 
 ---
 
