@@ -484,7 +484,7 @@ a { color: inherit; }
 .course.feat .tag { background: #fff; color: var(--red); }
 
 /* CTA band: light frosted overlay on the photo */
-.cta-band .bg::after { background: linear-gradient(180deg, rgba(236,238,241,.78), rgba(236,238,241,.9)); }
+.cta-band .bg::after { background: linear-gradient(180deg, rgba(231,233,239,.62), rgba(231,233,239,.8)); }
 .cta-band .wrap { color: var(--ink); }
 .cta-band p { color: var(--ink-soft); }
 
