@@ -509,3 +509,5 @@ a { color: inherit; }
   .tip { padding: 5px 8px; }
   .tip::before { width: 16px; }
 }
+
+.hero-h1 .burgundy { color: #7A1F2B; }
