@@ -115,10 +115,14 @@ a { color: inherit; }
 .hero { position: relative; height: 420vh; background: #E7E9EF; color: var(--ink); --coral: #F2B8B5; --peri: #7A1F2B; }
 .hero-stage {
   position: sticky; top: 0; height: 100vh; height: 100svh; overflow: hidden;
-  display: grid; place-items: center; background: #E7E9EF;
+  display: grid; place-items: center;
+  background:
+    radial-gradient(ellipse 75% 85% at 68% 38%, rgba(242,184,181,.55), transparent 72%),
+    radial-gradient(ellipse 70% 80% at 32% 62%, rgba(122,31,43,.22), transparent 72%),
+    #E7E9EF;
 }
 /* grainy coral + periwinkle glow (matches the video's background when frames are present) */
-.hero-glow { position: absolute; inset: -10%; pointer-events: none; filter: blur(70px) saturate(1.1); opacity: .9; }
+.hero-glow { display: none; }
 .hero-glow i { position: absolute; border-radius: 50%; }
 .hero-glow i:nth-child(1) { width: 44vw; height: 44vw; left: 44%; top: 12%; background: radial-gradient(circle, var(--coral) 0%, rgba(242,184,181,0) 68%); }
 .hero-glow i:nth-child(2) { width: 40vw; height: 40vw; left: 21%; top: 21%; background: radial-gradient(circle, var(--peri) 0%, rgba(122,31,43,0) 68%); }
