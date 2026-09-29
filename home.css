@@ -535,3 +535,31 @@ a { color: inherit; }
 .inj-meta { z-index: 3; left: 12px; right: 12px; bottom: 12px; padding: 10px 14px; border-radius: 12px;
   background: rgba(122,31,43,.28); border: 1px solid rgba(255,255,255,.3);
   backdrop-filter: blur(14px) saturate(1.4); -webkit-backdrop-filter: blur(14px) saturate(1.4); }
+
+/* ── Reviews: native cards in site style ── */
+.revs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; align-items: start; }
+.rev { position: relative; display: flex; flex-direction: column; gap: 22px; padding: 30px 26px 26px; border-radius: 24px;
+  background:
+    radial-gradient(ellipse 90% 70% at 100% 0%, rgba(242,184,181,.32), transparent 70%),
+    rgba(255,255,255,.55);
+  border: 1px solid rgba(255,255,255,.8); box-shadow: 0 24px 60px -36px rgba(107,26,38,.35), inset 0 0 0 1px rgba(28,26,23,.05);
+  backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); transition: transform .6s var(--ease), box-shadow .6s var(--ease); }
+.rev:hover { transform: translateY(-6px); box-shadow: 0 34px 70px -36px rgba(107,26,38,.45), inset 0 0 0 1px rgba(28,26,23,.05); }
+.rev:nth-child(even) { margin-top: 44px; }
+.rev::before { content: '\201C'; position: absolute; right: 22px; top: 6px; font-family: var(--f-display); font-size: 5.5rem; line-height: 1; color: rgba(122,31,43,.14); }
+.rev-top { display: flex; justify-content: space-between; align-items: center; }
+.rev-stars { color: var(--red); letter-spacing: .18em; font-size: .95rem; }
+.rev-src { font-size: .56rem; color: var(--ink-mute); }
+.rev blockquote { font-family: var(--f-accent); font-style: italic; font-size: 1.22rem; line-height: 1.38; color: var(--ink); }
+.rev figcaption { display: flex; align-items: center; gap: 12px; margin-top: auto; padding-top: 18px; border-top: 1px solid var(--line); }
+.rev figcaption b { display: block; font-family: var(--f-caps); font-weight: 400; text-transform: uppercase; letter-spacing: .12em; font-size: .86rem; }
+.rev figcaption .mono { display: block; margin-top: 4px; font-size: .52rem; color: var(--ink-mute); white-space: nowrap; }
+.rev-av { width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; flex-shrink: 0; color: #fff; font-family: var(--f-display); font-size: 1.2rem;
+  background: linear-gradient(150deg, #B4505A, #6B1A26); }
+@media (max-width: 1024px) { .revs { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 720px) {
+  .revs { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 14px; margin: 0 calc(var(--gutter) * -1); padding: 6px var(--gutter) 24px; scrollbar-width: none; }
+  .revs::-webkit-scrollbar { display: none; }
+  .rev { flex: 0 0 82%; scroll-snap-align: center; }
+  .rev:nth-child(even) { margin-top: 0; }
+}
