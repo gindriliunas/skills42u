@@ -118,8 +118,8 @@ a { color: inherit; }
   display: grid; place-items: center;
   background:
     radial-gradient(ellipse 75% 85% at 68% 38%, rgba(242,184,181,.55), transparent 72%),
-    radial-gradient(ellipse 70% 80% at 32% 62%, rgba(122,31,43,.22), transparent 72%),
-    #E7E9EF;
+    radial-gradient(ellipse 70% 80% at 32% 62%, rgba(122,31,43,.16), transparent 72%),
+    #E3E2E8;
 }
 /* grainy coral + periwinkle glow (matches the video's background when frames are present) */
 .hero-glow { display: none; }

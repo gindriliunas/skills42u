@@ -26,16 +26,16 @@
     { text: 'Sprains &amp; strains', where: 'Gym',        file: 'gym.webp' }
   ];
   var BOARDS = {
-    'office.webp':       { x: 27, y: 54, w: 50, h: 27, r: 0 },
-    'warehouse.webp':    { x: 28, y: 55, w: 46, h: 24, r: 0 },
-    'chef.webp':         { x: 25, y: 53, w: 52, h: 27, r: 0 },
-    'construction.webp': { x: 23, y: 55, w: 56, h: 28, r: 0 },
-    'reception.webp':    { x: 26, y: 49, w: 52, h: 26, r: 0 },
-    'retail.webp':       { x: 26, y: 57, w: 50, h: 26, r: 0 },
-    'carehome.webp':     { x: 25, y: 53, w: 50, h: 25, r: 0 },
-    'manager.webp':      { x: 27, y: 49, w: 48, h: 24, r: 0 },
-    'school.webp':       { x: 23, y: 54, w: 56, h: 30, r: 0 },
-    'gym.webp':          { x: 27, y: 48, w: 48, h: 23, r: 0 }
+    'office.webp':       { x: 14, y: 42, w: 72, h: 37, r: 0 },
+    'warehouse.webp':    { x: 17, y: 47, w: 59, h: 32, r: 0 },
+    'chef.webp':         { x: 21, y: 45, w: 58, h: 32, r: 0 },
+    'construction.webp': { x: 15, y: 50, w: 72, h: 33, r: -2 },
+    'reception.webp':    { x: 14, y: 42, w: 70, h: 36, r: 0 },
+    'retail.webp':       { x: 27, y: 43, w: 51, h: 27, r: 0 },
+    'carehome.webp':     { x: 17, y: 39, w: 68, h: 35, r: 0 },
+    'manager.webp':      { x: 18, y: 53, w: 60, h: 29, r: 0 },
+    'school.webp':       { x: 13, y: 49, w: 75, h: 43, r: 0 },
+    'gym.webp':          { x: 31, y: 49, w: 45, h: 39, r: 0 }
   };
 
   function buildCarousel() {
