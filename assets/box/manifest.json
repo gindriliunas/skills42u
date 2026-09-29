@@ -1,0 +1,10 @@
+{
+  "desktop": {
+    "count": 150,
+    "path": "/assets/box/desktop/frame_{i}.webp"
+  },
+  "mobile": {
+    "count": 90,
+    "path": "/assets/box/mobile/frame_{i}.webp"
+  }
+}
