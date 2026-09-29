@@ -428,6 +428,10 @@ a { color: inherit; }
   .aud { grid-template-columns: 1fr; }
   .aud-item { border-right: none; margin-right: 0; border-bottom: 1px solid var(--line); padding: 28px 0; }
   .calc-inputs, .calc-results-grid { grid-template-columns: 1fr; }
+  .compare thead tr, .compare tbody tr { display: grid; grid-template-columns: 1fr 1fr; }
+  .compare thead th:first-child { display: none; }
+  .compare td:first-child { grid-column: 1 / -1; width: auto; padding-bottom: 4px; border-bottom: none; font-family: var(--f-caps); text-transform: uppercase; letter-spacing: .06em; font-size: .82rem; color: var(--ink); }
+  .compare th, .compare td { padding: 12px 10px; font-size: .9rem; }
   .loc { grid-template-columns: 1fr auto; }
   .loc .mono.idx { display: none; }
   .loc .areas { grid-column: 1 / -1; order: 3; }
