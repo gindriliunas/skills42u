@@ -332,6 +332,19 @@
     gsap.fromTo(bg, { yPercent: -6 }, { yPercent: 6, ease: 'none', scrollTrigger: { trigger: bg.parentNode, start: 'top bottom', end: 'bottom top', scrub: true } });
   });
 
+  /* ─────────────── CPR demo: draw the guide line, then pop each tip ─────────────── */
+  var cpr = document.getElementById('cpr-demo');
+  if (cpr) {
+    var tl2 = gsap.timeline({ scrollTrigger: { trigger: cpr, start: 'top 80%', end: 'bottom 85%', scrub: 0.6 } });
+    var dots = cpr.querySelectorAll('.tip-dot'), tips = cpr.querySelectorAll('.tip');
+    gsap.set(dots, { scale: 0 }); gsap.set(tips, { autoAlpha: 0, x: -12 });
+    tl2.fromTo(cpr.querySelector('.tip-line'), { clipPath: 'inset(0 0 100% 0)' }, { clipPath: 'inset(0 0 0% 0)', duration: 1, ease: 'none' }, 0);
+    [0, 0.45, 0.9].forEach(function (t, i) {
+      tl2.to(dots[i], { scale: 1, duration: 0.12, ease: 'back.out(1.6)' }, t)
+         .to(tips[i], { autoAlpha: 1, x: 0, duration: 0.18, ease: 'power2.out' }, t + 0.06);
+    });
+  }
+
   /* ─────────────── Horizontal steps (desktop) ─────────────── */
   ScrollTrigger.matchMedia({
     '(min-width: 721px)': function () {

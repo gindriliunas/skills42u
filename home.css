@@ -494,3 +494,18 @@ a { color: inherit; }
 
 /* footer: soft ink instead of forest */
 .footer { background: var(--ink); }
+
+/* ── CPR demo photo with scroll-drawn technique tips ── */
+.cpr-demo { aspect-ratio: 1600 / 1371; }
+.cpr-demo img { width: 100%; height: 100%; object-fit: cover; }
+.tip-line { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+.tip-line polyline { fill: none; stroke: #fff; stroke-width: 2.4; stroke-dasharray: 5 5; vector-effect: non-scaling-stroke; filter: drop-shadow(0 1px 2px rgba(0,0,0,.35)); }
+.tip-dot { position: absolute; width: 14px; height: 14px; margin: -7px 0 0 -7px; border-radius: 50%; background: #fff; box-shadow: 0 0 0 4px rgba(200,35,30,.85), 0 2px 8px rgba(0,0,0,.3); }
+.tip { position: absolute; transform: translateY(-50%); background: var(--red); color: #fff; font-family: var(--f-body); font-weight: 600; font-size: clamp(.62rem, 1vw, .82rem); line-height: 1.15; padding: 7px 11px; border-radius: 6px; box-shadow: 0 10px 24px -10px rgba(120,20,20,.6); white-space: nowrap; }
+.tip small { display: block; font-weight: 500; font-size: .92em; opacity: .9; }
+.tip::before { content: ''; position: absolute; right: 100%; top: 50%; width: 28px; height: 2px; margin-right: 0; background: #fff; box-shadow: 0 1px 2px rgba(0,0,0,.3); }
+.no-js .tip-line, .reduced .tip-line { clip-path: none; }
+@media (max-width: 720px) {
+  .tip { padding: 5px 8px; }
+  .tip::before { width: 16px; }
+}
