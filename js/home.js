@@ -136,6 +136,7 @@
   var callouts = gsap.utils.toArray('.callout');
   var canvas = document.getElementById('hero-canvas');
   var ctx = canvas.getContext('2d');
+  var sharp = document.createElement('canvas'), sharpCtx = sharp.getContext('2d');
 
   // Where each item comes to rest, in multiples of box width, relative to box centre.
   var TARGETS = {
@@ -148,13 +149,11 @@
 
   // Where each item rests in the final video frame (fraction of frame width/height) and which side its label sits.
   var VIDEO_POS = {
-    bandage:  { x: 0.25, y: 0.21, side: 'l' },
-    plaster:  { x: 0.30, y: 0.38, side: 'l' },
-    eyewash:  { x: 0.25, y: 0.60, side: 'l' },
-    gloves:   { x: 0.52, y: 0.14, side: 'r' },
-    scissors: { x: 0.73, y: 0.32, side: 'r' },
-    coldpack: { x: 0.81, y: 0.42, side: 'r' },
-    foil:     { x: 0.74, y: 0.60, side: 'r' }
+    bandage:  { x: 0.25, y: 0.20, side: 'l' },
+    gloves:   { x: 0.50, y: 0.36, side: 'b' },
+    scissors: { x: 0.72, y: 0.30, side: 'r' },
+    coldpack: { x: 0.83, y: 0.36, side: 'r' },
+    foil:     { x: 0.76, y: 0.55, side: 'r' }
   };
 
   var frames = [], frameMode = false, lastFrame = -1;
@@ -162,9 +161,22 @@
     var img = frames[i];
     if (!img || !img.complete || !img.naturalWidth) return;
     var cw = canvas.width, ch = canvas.height, iw = img.naturalWidth, ih = img.naturalHeight;
-    var s = videoScale(cw, ch, iw, ih), w = iw * s, h = ih * s;
+    var s = videoScale(cw, ch, iw, ih), w = iw * s, h = ih * s, x = (cw - w) / 2, y = (ch - h) / 2;
     ctx.clearRect(0, 0, cw, ch);
-    ctx.drawImage(img, (cw - w) / 2, (ch - h) / 2, w, h);
+    // Sharp frame with feathered edges; the CSS glow behind the canvas carries the colour past them.
+    if (sharp.width !== Math.round(w) || sharp.height !== Math.round(h)) { sharp.width = Math.round(w); sharp.height = Math.round(h); }
+    var sw = sharp.width, sh = sharp.height, f = 0.16;
+    sharpCtx.globalCompositeOperation = 'source-over';
+    sharpCtx.clearRect(0, 0, sw, sh);
+    sharpCtx.drawImage(img, 0, 0, sw, sh);
+    sharpCtx.globalCompositeOperation = 'destination-in';
+    var gx = sharpCtx.createLinearGradient(0, 0, sw, 0);
+    gx.addColorStop(0, 'rgba(0,0,0,0)'); gx.addColorStop(f, '#000'); gx.addColorStop(1 - f, '#000'); gx.addColorStop(1, 'rgba(0,0,0,0)');
+    sharpCtx.fillStyle = gx; sharpCtx.fillRect(0, 0, sw, sh);
+    var gy = sharpCtx.createLinearGradient(0, 0, 0, sh);
+    gy.addColorStop(0, 'rgba(0,0,0,0)'); gy.addColorStop(f, '#000'); gy.addColorStop(1 - f, '#000'); gy.addColorStop(1, 'rgba(0,0,0,0)');
+    sharpCtx.fillStyle = gy; sharpCtx.fillRect(0, 0, sw, sh);
+    ctx.drawImage(sharp, x, y);
     lastFrame = i;
   }
   // Video fits inside the stage (contain) then scales: smaller on desktop to leave room for copy, larger on phones.
@@ -208,6 +220,10 @@
         cx = r.left - sr.left + r.width / 2; cy = r.top - sr.top + r.height / 2; half = r.width / 2; left = t.x < 0;
       }
       c.style.display = '';
+      if (frameMode && VIDEO_POS[key].side === 'b') {
+        c.style.top = (cy + 6) + 'px'; c.style.left = (cx - c.offsetWidth / 2) + 'px'; c.style.right = ''; c.style.flexDirection = 'row';
+        return;
+      }
       c.style.top = (cy - 12) + 'px';
       c.style.left = left ? '' : (cx + half + 10) + 'px';
       c.style.right = left ? (sr.width - cx + half + 10) + 'px' : '';
@@ -278,7 +294,6 @@
     .then(function (r) {
       if (r === 'fail' || !frames.length) throw 0;
       frameMode = true; scene.classList.add('hidden'); canvas.classList.add('ready');
-      var glow = document.getElementById('hero-glow'); if (glow) glow.style.display = 'none';
       startHero(); drawFrame(0);
     })
     .catch(function () { frameMode = false; startHero(); });

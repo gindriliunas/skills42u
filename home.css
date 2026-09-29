@@ -112,7 +112,7 @@ a { color: inherit; }
 .nav-call { text-decoration: none; margin-right: 18px; opacity: .8; }
 
 /* ── HERO (pinned product view) ── */
-.hero { position: relative; height: 420vh; background: #E7E9EF; color: var(--ink); --coral: #FF6A3D; --peri: #6F8BFF; }
+.hero { position: relative; height: 420vh; background: #E7E9EF; color: var(--ink); --coral: #F2B8B5; --peri: #7A1F2B; }
 .hero-stage {
   position: sticky; top: 0; height: 100vh; height: 100svh; overflow: hidden;
   display: grid; place-items: center; background: #E7E9EF;
@@ -120,11 +120,10 @@ a { color: inherit; }
 /* grainy coral + periwinkle glow (matches the video's background when frames are present) */
 .hero-glow { position: absolute; inset: -10%; pointer-events: none; filter: blur(70px) saturate(1.1); opacity: .9; }
 .hero-glow i { position: absolute; border-radius: 50%; }
-.hero-glow i:nth-child(1) { width: 46vw; height: 46vw; left: 44%; top: 34%; background: radial-gradient(circle, var(--coral) 0%, rgba(255,106,61,0) 68%); }
-.hero-glow i:nth-child(2) { width: 42vw; height: 42vw; left: 20%; top: 40%; background: radial-gradient(circle, var(--peri) 0%, rgba(111,139,255,0) 68%); }
-.hero-glow i:nth-child(3) { width: 30vw; height: 30vw; left: 38%; top: 12%; background: radial-gradient(circle, #FFB08F 0%, rgba(255,176,143,0) 70%); }
-.hero-canvas { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; transition: opacity .6s;
-  -webkit-mask-image: radial-gradient(ellipse 39% 43% at 50% 50%, #000 62%, transparent 100%); mask-image: radial-gradient(ellipse 39% 43% at 50% 50%, #000 62%, transparent 100%); }
+.hero-glow i:nth-child(1) { width: 44vw; height: 44vw; left: 44%; top: 12%; background: radial-gradient(circle, var(--coral) 0%, rgba(242,184,181,0) 68%); }
+.hero-glow i:nth-child(2) { width: 40vw; height: 40vw; left: 21%; top: 21%; background: radial-gradient(circle, var(--peri) 0%, rgba(122,31,43,0) 68%); }
+.hero-glow i:nth-child(3) { width: 34vw; height: 34vw; left: 33%; top: 18%; background: radial-gradient(circle, #F7D3CF 0%, rgba(247,211,207,0) 70%); }
+.hero-canvas { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; transition: opacity .6s; }
 .hero-canvas.ready { opacity: 1; }
 .hero-grain { position: absolute; inset: 0; pointer-events: none; opacity: .22; mix-blend-mode: multiply;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.1' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .3 0 0 0 0 .3 0 0 0 0 .35 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
@@ -445,13 +444,13 @@ a { color: inherit; }
 }
 
 /* ═══ Misty sections — replaces the dark forest green (matches hero) ═══ */
-:root { --mist: #E7E9EF; --coral: #FF6A3D; --peri: #6F8BFF; }
+:root { --mist: #E7E9EF; --coral: #F2B8B5; --peri: #7A1F2B; }
 .sec-dark {
   --line-light: rgba(28,26,23,.12);
   color: var(--ink); overflow: hidden;
   background:
-    radial-gradient(ellipse 45% 55% at 88% 12%, rgba(255,106,61,.30), transparent 70%),
-    radial-gradient(ellipse 45% 60% at 8% 92%, rgba(111,139,255,.30), transparent 70%),
+    radial-gradient(ellipse 75% 85% at 68% 38%, rgba(242,184,181,.55), transparent 72%),
+    radial-gradient(ellipse 70% 80% at 32% 62%, rgba(122,31,43,.22), transparent 72%),
     var(--mist);
 }
 .sec-dark::after { content: ''; position: absolute; inset: 0; pointer-events: none; opacity: .18; mix-blend-mode: multiply;
@@ -465,16 +464,16 @@ a { color: inherit; }
 .sec-dark .btn-line:hover { background: var(--ink); color: var(--paper); border-color: var(--ink); }
 .step, .partner { background: rgba(255,255,255,.34); border-color: rgba(255,255,255,.7);
   backdrop-filter: blur(18px) saturate(1.2); -webkit-backdrop-filter: blur(18px) saturate(1.2); box-shadow: 0 20px 60px -34px rgba(40,50,90,.35); }
-.partner:hover { background: rgba(255,255,255,.55); border-color: rgba(255,106,61,.45); }
+.partner:hover { background: rgba(255,255,255,.55); border-color: rgba(242,184,181,.45); }
 .partner .logo-box { background: rgba(255,255,255,.6); }
 .compare .us { background: rgba(255,255,255,.5); }
 
 /* featured course: grainy coral→periwinkle card, like the reference poster */
 .course.feat { border-color: transparent; color: #fff;
   background:
-    radial-gradient(ellipse 80% 60% at 80% 85%, rgba(255,106,61,.95), transparent 70%),
-    radial-gradient(ellipse 70% 60% at 15% 15%, rgba(111,139,255,.9), transparent 70%),
-    linear-gradient(160deg, #8A6CE0, #FF7A4E); }
+    radial-gradient(ellipse 80% 60% at 80% 85%, rgba(242,184,181,.5), transparent 70%),
+    radial-gradient(ellipse 70% 60% at 15% 15%, rgba(122,31,43,.9), transparent 70%),
+    linear-gradient(160deg, #6B1A26, #B4505A); }
 .course.feat .per { color: rgba(255,255,255,.75); }
 .course.feat ul, .course.feat li { border-color: rgba(255,255,255,.3); }
 .course.feat li::before { color: #fff; }
