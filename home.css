@@ -511,7 +511,7 @@ a { color: inherit; }
 }
 
 .hero-h1 .accent { color: #7A1F2B; }
-.hero-h1 .burgundy { color: var(--red); }
+.hero-h1 .burgundy { color: var(--red); white-space: nowrap; }
 
 /* ── Carousel: warm editorial grade + glass ── */
 .inj-card { isolation: isolate; box-shadow: 0 30px 60px -30px rgba(107,26,38,.45), inset 0 0 0 1px rgba(255,255,255,.4); }
