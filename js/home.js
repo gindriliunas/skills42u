@@ -150,7 +150,7 @@
   // Where each item rests in the final video frame (fraction of frame width/height) and which side its label sits.
   var VIDEO_POS = {
     bandage:  { x: 0.25, y: 0.20, side: 'l' },
-    gloves:   { x: 0.50, y: 0.36, side: 'b' },
+    gloves:   { x: 0.50, y: 0.06, side: 't' },
     scissors: { x: 0.72, y: 0.30, side: 'r' },
     coldpack: { x: 0.83, y: 0.36, side: 'r' },
     foil:     { x: 0.76, y: 0.55, side: 'r' }
@@ -220,8 +220,9 @@
         cx = r.left - sr.left + r.width / 2; cy = r.top - sr.top + r.height / 2; half = r.width / 2; left = t.x < 0;
       }
       c.style.display = '';
-      if (frameMode && VIDEO_POS[key].side === 'b') {
-        c.style.top = (cy + 6) + 'px'; c.style.left = (cx - c.offsetWidth / 2) + 'px'; c.style.right = ''; c.style.flexDirection = 'row';
+      var vs = frameMode && VIDEO_POS[key].side;
+      if (vs === 'b' || vs === 't') {
+        c.style.top = (vs === 't' ? cy - c.offsetHeight - 6 : cy + 6) + 'px'; c.style.left = (cx - c.offsetWidth / 2) + 'px'; c.style.right = ''; c.style.flexDirection = 'row';
         return;
       }
       c.style.top = (cy - 12) + 'px';
