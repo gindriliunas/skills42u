@@ -80,9 +80,9 @@
       "@type": "OfferCatalog",
       "name": "First Aid Courses",
       "itemListElement": [
-        { "@type": "Offer", "name": "Emergency First Aid at Work (EFAW)", "price": "995", "priceCurrency": "GBP" },
-        { "@type": "Offer", "name": "Paediatric First Aid", "price": "1695", "priceCurrency": "GBP" },
-        { "@type": "Offer", "name": "First Aid at Work (Full)", "price": "1995", "priceCurrency": "GBP" }
+        { "@type": "Offer", "name": "Emergency First Aid at Work (EFAW)", "price": "695", "priceCurrency": "GBP" },
+        { "@type": "Offer", "name": "Paediatric First Aid", "price": "1295", "priceCurrency": "GBP" },
+        { "@type": "Offer", "name": "First Aid at Work (Full)", "price": "1795", "priceCurrency": "GBP" }
       ]
     }
   }
@@ -264,7 +264,7 @@
       <article class="course feat rv">
         <div class="course-top"><span class="mono">6 hours</span><span class="tag mono">Most popular</span></div>
         <h3>Emergency First Aid at Work</h3>
-        <div class="price"><sup>£</sup>995</div>
+        <div class="price"><sup>£</sup>695</div>
         <span class="per mono">Per group · up to 12</span>
         <ul>
           <li>Full day, hands-on session</li>
@@ -278,7 +278,7 @@
       <article class="course rv">
         <div class="course-top"><span class="mono">2 days</span></div>
         <h3>Paediatric First Aid</h3>
-        <div class="price"><sup>£</sup>1,695</div>
+        <div class="price"><sup>£</sup>1,295</div>
         <span class="per mono">Per group · up to 12</span>
         <ul>
           <li>Full 2-day paediatric course</li>
@@ -292,7 +292,7 @@
       <article class="course rv">
         <div class="course-top"><span class="mono">3 days</span></div>
         <h3>First Aid at Work (Full)</h3>
-        <div class="price"><sup>£</sup>1,995</div>
+        <div class="price"><sup>£</sup>1,795</div>
         <span class="per mono">Per group · up to 12</span>
         <ul>
           <li>Full 3-day qualification</li>
@@ -847,10 +847,10 @@
 
   function courseRec(sector) {
     if (['construction','warehouse','manufacturing','agriculture'].includes(sector))
-      return 'First Aid at Work (3-day) — £1,995 for your whole group';
+      return 'First Aid at Work (3-day) — £1,795 for your whole group';
     if (sector === 'education')
-      return 'Paediatric First Aid (2-day) — £1,695 for your whole group';
-    return 'Emergency First Aid at Work (6-hour) — £995 for your whole group';
+      return 'Paediatric First Aid (2-day) — £1,295 for your whole group';
+    return 'Emergency First Aid at Work (6-hour) — £695 for your whole group';
   }
 
   function runCalc() {
